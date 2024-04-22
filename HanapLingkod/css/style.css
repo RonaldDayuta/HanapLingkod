@@ -1,0 +1,338 @@
+/* Sign In CSS */
+.left-box {
+    background: #CCC1FF;
+}
+
+.left-box p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.right-box .header-text h2 {
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #172C66; /* Change color to #172C66 */
+    font-size: 1.5rem; /* Adjust font size */
+    margin-top: 20px; /* Add margin to the top */
+    font-weight: bold; /* Make text bold */
+}
+
+.right-box .header-text p {
+    margin-bottom: 20px;
+}
+
+.right-box .form-check-label, .forgot a, .row a {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Add bottom border to text input */
+.form-control.no-border {
+    border: none;
+    border-radius: 0;
+    border-bottom: 0px solid #ced4da; /* Increase border thickness */
+}
+
+.forgot {
+    text-align: right; /* Align text to the right */
+    padding-right: 15px; /* Add padding to align numerically */
+}
+
+.forgot a {
+    font-size: smaller; /* Adjust font size */
+}
+
+.divider {
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Increase margin-top */
+    margin-bottom: 40px; /* Increase margin-bottom */
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Adjust vertically centered */
+    width: 40%; /* Adjust width */
+    height: 2px; /* Increase line thickness */
+    background-color: #ced4da;
+}
+
+.divider::before {
+    right: 5%; /* Adjust right position */
+}
+
+.divider::after {
+    left: 5%; /* Adjust left position */
+}
+
+.or-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0 10px;
+    color: #042949;
+}
+
+/* Create Account CSS */
+.back-button {
+    position: relative;
+    top: 10px;
+    left: 0;
+    margin-bottom: 30px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+#button1,
+#button2 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the button horizontally */
+}
+
+#button1 img,
+#button2 img {
+    margin-right: 5px; /* Adjust as needed */
+    width: 65px; /* Increased the size of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#button1 span,
+#button2 span {
+    text-align: left;
+    font-size: 1rem; /* Adjust the font size of the text */
+}
+
+#worker-account {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold; /* Make the text bold */
+    color: black; /* Change the color */
+    font-size: 1.5rem; /* Adjust the font size */
+}
+
+#button1 span strong,
+#button2 span strong {
+    font-weight: bold; /* Make the text bold */
+}
+
+.folder {
+    border: 2px solid #E0E0E0; /* Set the border style, width, and color */
+    border-radius: 20px; /* Adjust the border-radius value as needed */
+}
+
+/* Custom button styles */
+.custom-button {
+    width: 200px; /* Set the width of the button */
+    height: 100px; /* Set the height of the button */
+    background-color: #172C66; /* Change the background color */
+    color: white; /* Change the text color */
+    font-size: 1rem; /* Change the font size */
+    border: none; /* Remove the border */
+    border-radius: 10px; /* Add border radius */
+    outline: none; /* Remove the outline */
+    cursor: pointer; /* Change the cursor on hover */
+    transition: background-color 0.3s; /* Add transition for background color */
+}
+
+.custom-button:hover {
+    background-color: #7e57c2; /* Change the background color on hover */
+}
+
+.create-account-button {
+    margin-top: 40px; /* Adjust the margin to separate from Or divider */
+}
+
+/* Remove button responsiveness */
+@media (max-width: 992px) {
+    .custom-button {
+        min-width: auto;
+    }
+}
+
+/* Recruiter Information CSS */
+.spacer {
+    width: 10px; /* Adjust as needed */
+}
+
+/* Style for the custom file input button */
+.custom-file-upload {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 100px; /* Adjust padding to resize button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin-bottom */
+}
+
+/* Hover effect for the custom file input button */
+.custom-file-upload:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+.btn{
+    cursor: pointer;
+    background-color: #172C66;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.btn:hover{
+    background-color: #218838;
+}
+/* Style for the create account button */
+.create-account-button {
+    cursor: pointer;
+    display: inline-block;
+    /* Adjust padding to resize button */
+    background-color: #172C66; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 3px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 3px; /* Add margin-top */
+}
+
+/* Hover effect for the create account button */
+.create-account-button:hover {
+    background-color: #218838; /* Hover background color */
+}
+
+/* worker information */
+
+.spacer {
+    width: 10px; /* Adjust as needed */
+}
+
+/* Style for the custom file input button */
+.custom-file-upload {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 100px; /* Adjust padding to resize button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin-bottom */
+}
+
+/* Hover effect for the custom file input button */
+.custom-file-upload:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+/* Style for the create account button */
+.create-account-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 250px; /* Adjust padding to resize button */
+    background-color: #172C66; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 3px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 3px; /* Add margin-top */
+}
+
+/* Hover effect for the create account button */
+.create-account-button:hover {
+    background-color: #218838; /* Hover background color */
+}
+
+/* Style for the Next button */
+.next-button {
+    cursor: pointer;
+    color: #007bff; /* Button text color */
+    text-decoration: underline; /* Add underline to mimic link */
+}
+
+/* Hover effect for the Next button */
+.next-button:hover {
+    color: #0056b3; /* Hover text color */
+}
+/* Style for the Next button */
+.next-button {
+     cursor: pointer;
+     color: #007bff; /* Button text color */
+     text-decoration: underline; /* Add underline to mimic link */
+     display: block; /* Make it a block element */
+    text-align: right; /* Align text to the right */
+}
+
+/* Hover effect for the Next button */
+.next-button:hover {
+     color: #0056b3; /* Hover text color */
+}
+
+/* Next page Worker info /*
+/* Style for the slider */
+.slider-container {
+    width: 200px;
+    margin-top: 10px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/* Divider style */
+.divider {
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Increase margin-top */
+    margin-bottom: 30px; /* Increase margin-bottom */
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Keep vertically centered */
+    width: 50%; /* Extend line width */
+    height: 2px; /* Increase line thickness */
+    background-color: #ced4da;
+}
+
+.divider::before {
+    right: 0; /* Adjust right position */
+}
+
+.divider::after {
+    left: 0; /* Adjust left position */
+}
+
+
