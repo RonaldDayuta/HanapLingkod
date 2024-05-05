@@ -49,21 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emptyFields[] = 'Phone Number';
         $error['phoneno'] = 'Phone Number is required';
     }
-<<<<<<< HEAD
     if (empty($_POST['email'])) {
         $emptyFields[] = 'email';
         $error['email'] = 'email is required';
     }
-=======
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
     if (empty($_FILES["file"]["name"])) {
         $emptyFields[] = 'File';
         $error['file']["name"] = 'ID Picture is required';
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
     // If any field is empty, return error message
     if (!empty($emptyFields)) {
         $response['success'] = false;
@@ -78,11 +72,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sex = $_POST['sex'];
         $homeAddress = $_POST['homeAddress'];
         $phoneno = $_POST['phoneno'];
-<<<<<<< HEAD
         $email = $_POST['email'];
 
-=======
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 
         // Handle file upload
         $file = $_FILES["file"];
@@ -113,37 +104,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Save the file to the specified folder
                 if (move_uploaded_file($fileTmpName, $filePath)) {
-                    // Now, insert the form data into the database
-<<<<<<< HEAD
-                    $sql = "INSERT INTO tblaccounts (username, password, birthdate, age, sex, home_address, phone_no, email, id_image, position)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'recruiter')";
+            // Now, insert the form data into the database
+                $sql = "INSERT INTO tblaccounts (username, password, birthdate, age, sex, home_address, phone_no, email, id_image, position)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'worker')";
+                $stmt = mysqli_prepare($conn, $sql);
+                mysqli_stmt_bind_param($stmt, "sssisssss", $username, $password, $birthdate, $age, $sex, $homeAddress, $phoneno, $email, $filePath);
 
-                    $stmt = mysqli_prepare($conn, $sql);
-                    mysqli_stmt_bind_param($stmt, "sssissssss", $username, $password, $birthdate, $age, $sex, $homeAddress, $phoneno, $email, $filePath);
-
-                    if (mysqli_stmt_execute($stmt)) {
-                    $response['success'] = true;
-                    $response['message'] = 'Data Successfully Saved!';
-                    } else {
-                    $response['success'] = false;
-                    $response['message'] = 'Error inserting data into database: ' . mysqli_error($conn);
-                    }
-=======
-                    $sql = "INSERT INTO tblrecruiter (username, password, birthdate, age, sex, home_address, phone_no, id_image)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                    $stmt = mysqli_prepare($conn, $sql);
-                    mysqli_stmt_bind_param($stmt, "sssissss", $username, $password, $birthdate, $age, $sex, $homeAddress, $phoneno, $filePath);
-
-                    if (mysqli_stmt_execute($stmt)) {
-                        $response['success'] = true;
-                        $response['message'] = 'Data Successfully Saved!';
-                    } else {
-                        $response['success'] = false;
-                        $response['message'] = 'Error inserting data into database: ' . mysqli_error($conn);
-                    }
-
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
-                    mysqli_stmt_close($stmt);
+                if (mysqli_stmt_execute($stmt)) {
+                $response['success'] = true;
+                $response['message'] = 'Data Successfully Saved!';
+                } else {
+                $response['success'] = false;
+                $response['message'] = 'Error inserting data into database: ' . mysqli_error($conn);
+                }
+                mysqli_stmt_close($stmt);
                 } else {
                     $response['success'] = false;
                     $response['message'] = 'Error moving uploaded file to destination folder.';

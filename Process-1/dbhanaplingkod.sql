@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: May 05, 2024 at 09:15 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
-=======
--- Generation Time: Apr 22, 2024 at 11:22 AM
+-- Generation Time: Apr 22, 2024 at 02:24 PM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Table structure for table `tblaccounts`
 --
 
@@ -54,15 +47,11 @@ CREATE TABLE `tblaccounts` (
 
 INSERT INTO `tblaccounts` (`id`, `username`, `password`, `birthdate`, `age`, `sex`, `home_address`, `phone_no`, `email`, `id_image`, `position`) VALUES
 (1, 'worker', '1234', '2003-01-27', 21, 'male', 'eqweqe', '123123', 'worker@gmail.com', '../id_images/66264c4f6d33c_Chocolate.png', 'worker'),
-(3, 'JohnDoe', 'password123', '1990-05-15', 31, 'male', '123 Main Street', '1234567890', 'johndoe@example.com', 'image.jpg', 'worker'),
-(4, 'JaneSmith', 'abc123', '1985-10-20', 36, 'female', '456 Oak Avenue', '0987654321', 'janesmith@example.com', 'photo.png', 'recruiter'),
-(5, 'adminnald', '1234', '2003-01-27', 21, 'male', '101 San Guillermo Street. Bayanan, Muntinlupa City', '09461977083', 'adminnald@example.com', '../id_images/6632fa9fd1e83_lemon.jpg', 'admin');
+(2, 'pj-worker', '1234', '2024-04-22', 21, 'male', 'eqweqe', '123123', 'worker@gmail.com', '../id_images/66265296947a4_Taro.png', 'worker');
 
 -- --------------------------------------------------------
 
 --
-=======
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 -- Table structure for table `tblrecruiter`
 --
 
@@ -105,7 +94,6 @@ INSERT INTO `tblrecruiter` (`id`, `username`, `password`, `birthdate`, `age`, `s
 (20, 'admin', '1234', '2024-04-22', 20, 'male', 'dsad', '123123', '../id_images/6625e491e6fdb_1.jpg'),
 (21, 'admin', '1234', '2024-04-22', 20, 'male', 'dsad', '123123', '../id_images/6625e4c0d5164_1.jpg'),
 (22, 'ronald', '1234', '2024-04-22', 20, 'male', '101 san guillermo street, bayanan muntinlupa city', '09461977083', '../id_images/6625e524d0ffd_WIN_20240308_15_47_19_Pro.jpg'),
-<<<<<<< HEAD
 (23, 'admin', '1234', '2024-04-22', 20, 'male', 'dsad', '123', '../id_images/6625e81cb4d34_1.jpg'),
 (24, 'asdasd', 'asdasda', '2024-04-01', 2, 'male', 'asdasd', 'aaasdad', '../id_images/66263059d4faa_woman.png');
 
@@ -134,48 +122,38 @@ CREATE TABLE `tblworker` (
 
 INSERT INTO `tblworker` (`id`, `username`, `password`, `birthdate`, `age`, `sex`, `home_address`, `phone_no`, `email`, `id_image`) VALUES
 (1, 'kap', '1234', '2024-04-22', 21, 'male', 'sdfghj', '0234567', 'kapre@gmail.com', '../id_images/66263beff07a7_woman.png');
-=======
-(23, 'admin', '1234', '2024-04-22', 20, 'male', 'dsad', '123', '../id_images/6625e81cb4d34_1.jpg');
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 
 --
 -- Indexes for dumped tables
 --
 
 --
-<<<<<<< HEAD
 -- Indexes for table `tblaccounts`
 --
 ALTER TABLE `tblaccounts`
   ADD PRIMARY KEY (`id`);
 
 --
-=======
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 -- Indexes for table `tblrecruiter`
 --
 ALTER TABLE `tblrecruiter`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
 -- Indexes for table `tblworker`
 --
 ALTER TABLE `tblworker`
   ADD PRIMARY KEY (`id`);
 
 --
-=======
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
-<<<<<<< HEAD
 -- AUTO_INCREMENT for table `tblaccounts`
 --
 ALTER TABLE `tblaccounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblrecruiter`
@@ -188,12 +166,6 @@ ALTER TABLE `tblrecruiter`
 --
 ALTER TABLE `tblworker`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-=======
--- AUTO_INCREMENT for table `tblrecruiter`
---
-ALTER TABLE `tblrecruiter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

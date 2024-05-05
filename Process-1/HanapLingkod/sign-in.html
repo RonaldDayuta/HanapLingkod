@@ -23,11 +23,7 @@
                         <h2>Hello, User</h2>
                         <p>We are HanapLingkod Service.</p>
                     </div>
-<<<<<<< HEAD
-                    <form id="loginForm" action="api/login.php" method="post"> <!-- Corrected -->
-=======
                     <form id="createAccountForm" action="create-account.html" method="post"> <!-- Corrected -->
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
                         <div class="input-group mb-3">
                             <span class="input-group-text" style="display: none;" id="emailLabel">Email Address</span>
                             <input type="text" class="form-control no-border" id="email" name="email" placeholder="Email Address" aria-describedby="emailLabel">
@@ -42,11 +38,7 @@
                         <div class="input-group mb-5">
                         </div>
                         <div class="input-group mb-3">
-<<<<<<< HEAD
-                            <button class="btn btn-sm btn-primary w-100" id="loginButton" type="submit">Login</button> <!-- Corrected -->
-=======
                             <button class="btn btn-sm btn-primary w-100" id="login">Login</button> <!-- Corrected -->
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
                         </div>
                         <div class="divider">
                             <span class="or-text">Or</span>
@@ -60,79 +52,6 @@
         </div>
     </div>
 </body>
-<<<<<<< HEAD
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
-<script type="text/javascript">
-    $(function() {
-    $("#loginForm").submit(function(event) {
-        event.preventDefault();
-
-        var email = $("#email").val().trim();
-        var password = $("#password").val().trim();
-
-        if (email != "" && password != "") {
-            $.ajax({
-                url: 'api/login.php',
-                type: 'POST',
-                data: { 
-                    email: email,
-                    password: password 
-                },
-                dataType: 'json',
-                success: function(response) {
-                    if (response.success) {
-                        Swal.fire({
-                            title: 'Successful',
-                            text: response.message,
-                            icon: 'success',
-                        }).then(function() {
-                            // Redirect the user to the specified URL
-                            window.location.href = response.redirect_url;
-                            console.log(response.redirect_url);
-                        });
-                    } else {
-                        Swal.fire({
-                            title: 'Error',
-                            text: response.message,
-                            icon: 'error',
-                        });
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.error('AJAX request failed:', textStatus, errorThrown);
-                    Swal.fire({
-                        title: 'Error',
-                        text: 'An error occurred during the login process.',
-                        icon: 'error',
-                    });
-                }
-            });
-        } else {
-            alert("Please enter both email and password.");
-        }
-    });
-});
-</script>
-
-<script>
-    // Function to handle form submission and show loading state
-    document.getElementById("signUpButton").addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent default form submission
-        // Show loading state by adding a spinner to the button
-        var button = document.getElementById("signUpButton");
-        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Creating Account...';
-        button.disabled = true; // Disable the button to prevent multiple submissions
-    
-        // Redirect to create-account.html after a short delay
-        setTimeout(function() {
-            window.location.href = 'create-account.html';
-        }, 1000); // Change 1000 to your desired loading duration in milliseconds
-    });
-</script>
-    
-=======
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
 
@@ -205,5 +124,4 @@
             }, 1000); // Change 2000 to your desired loading duration in milliseconds
         });
     </script>
->>>>>>> f2b094672def4ffa76bf83e2d91230db5e583d4c
 </html>
